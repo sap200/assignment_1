@@ -64,8 +64,6 @@ This is a Solidity smart contract for conducting a token sale in two phases: a p
 
 ## Requirements
 
-To use and deploy this smart contract, make sure to meet the following requirements:
-
 - Implement the smart contract in Solidity.
 - Use the ERC-20 standard for the project token.
 - Incorporate proper error handling and event logging.
