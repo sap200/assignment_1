@@ -32,7 +32,7 @@ This is a Solidity smart contract for conducting a token sale in two phases: a p
 ```
 
 - TestCaseId is the serial number of test case
-- TestcaseDescription provides comprehensive description of testcase
+- TestDescription provides comprehensive description of testcase
 - Expected provides the expected output of the testcase
 
 ![Test Case result](./tc.png)
