@@ -1,66 +1,39 @@
-## Foundry
+# Token Sale Smart Contract
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Introduction
 
-Foundry consists of:
+This is a Solidity smart contract for conducting a token sale in two phases: a presale and a public sale. It enables contributors to exchange Ether for project tokens. The smart contract includes features such as contribution limits, token distribution, and refund functionality based on the minimum cap.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Features
 
-## Documentation
+### Presale:
 
-https://book.getfoundry.sh/
+- Users can contribute Ether to the presale and receive project tokens.
+- Maximum cap on total Ether raised.
+- Minimum and maximum contribution limits per participant.
+- Immediate token distribution upon contribution.
 
-## Usage
+### Public Sale:
 
-### Build
+- Public sale begins after the presale ends.
+- Users can contribute Ether to the public sale and receive project tokens.
+- Maximum cap on total Ether raised.
+- Minimum and maximum contribution limits per participant.
+- Immediate token distribution upon contribution.
 
-```shell
-$ forge build
-```
+### Token Distribution:
 
-### Test
+- Owner-exclusive function to distribute project tokens to a specified address.
 
-```shell
-$ forge test
-```
+### Refund:
 
-### Format
+- Contributors can claim refunds if the minimum cap for the presale or public sale is not reached.
 
-```shell
-$ forge fmt
-```
+## Requirements
 
-### Gas Snapshots
+To use and deploy this smart contract, make sure to meet the following requirements:
 
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+- Implement the smart contract in Solidity.
+- Use the ERC-20 standard for the project token.
+- Incorporate proper error handling and event logging.
+- Ensure the smart contract adheres to security best practices.
