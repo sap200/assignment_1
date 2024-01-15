@@ -21,7 +21,19 @@ This is a Solidity smart contract for conducting a token sale in two phases: a p
 - SafeMath operations are used to prevent overflow and underflow vulnerabilities in arithmetic operations.
 - The constructor includes `require` checks to prevent the deployment of a flawed contract with invalid parameters, enhancing the contract's security.
 
-## Test Case Result
+## Test Case
+
+- Test cases can be found in TestCases.yml format, it is written as a YML List format to ensure readability. Here is an example
+
+```yml
+- TestCaseId: 1
+  TestDescription: A customer contributes ether to the presale with a valid amount.
+  Expected: The contract balance should increase, and the customer's address should receive ProjectToken.
+```
+
+- TestCaseId is the serial number of test case
+- TestcaseDescription provides comprehensive description of testcase
+- Expected provides the expected output of the testcase
 
 ![Test Case result](./tc.png)
 
