@@ -23,7 +23,7 @@ This is a Solidity smart contract for conducting a token sale in two phases: a p
 
 ## Test Case
 
-- Test cases can be found in TestCases.yml format, it is written as a YML List format to ensure readability. Here is an example
+- Test cases can be found in `TestCases.yml` file in `YML` format, it is written as a YML List format to ensure readability. Here is an example
 
 ```yml
 - TestCaseId: 1
@@ -34,6 +34,8 @@ This is a Solidity smart contract for conducting a token sale in two phases: a p
 - TestCaseId is the serial number of test case
 - TestDescription provides comprehensive description of testcase
 - Expected provides the expected output of the testcase
+
+## Test Case Execution Result
 
 ![Test Case result](./tc.png)
 
