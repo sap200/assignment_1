@@ -21,6 +21,10 @@ This is a Solidity smart contract for conducting a token sale in two phases: a p
 - SafeMath operations are used to prevent overflow and underflow vulnerabilities in arithmetic operations.
 - The constructor includes `require` checks to prevent the deployment of a flawed contract with invalid parameters, enhancing the contract's security.
 
+## Test Case Result
+
+![Test Case result](./tc.png)
+
 ## Features
 
 ### Presale:
