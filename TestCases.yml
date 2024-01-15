@@ -1,0 +1,79 @@
+- TestCaseId: 1
+  TestDescription: A customer contributes ether to the presale with a valid amount.
+  Expected: The contract balance should increase, and the customer's address should receive ProjectToken.
+
+- TestCaseId: 2
+  TestDescription: A customer contributes ether to the presale but violates the presaleMinimumCapContribution.
+  Expected: The transaction should be reverted by the VM.
+
+- TestCaseId: 3
+  TestDescription: A customer contributes ether to the presale but violates the presaleMaxCapContribution.
+  Expected: The transaction should be reverted by the VM.
+
+- TestCaseId: 4
+  TestDescription: A customer contributes ether to the presale, but the maximum cap on presale contributions is violated.
+  Expected: The transaction should be reverted by the VM.
+
+- TestCaseId: 5
+  TestDescription: User attempts to contribute to the presale after it has ended.
+  Expected: The VM should revert the transaction.
+
+- TestCaseId: 6
+  TestDescription: User tries to contribute ether to the public sale, but the public sale has not started yet.
+  Expected: The VM should revert the transaction.
+
+- TestCaseId: 7
+  TestDescription: At the start of the public sale, a user tries to contribute but violates the minimum cap on contributions.
+  Expected: The transaction should be reverted.
+
+- TestCaseId: 8
+  TestDescription: During the public sale, a user tries to contribute but violates the maximum cap on contributions.
+  Expected: The transaction should be reverted by the VM.
+
+- TestCaseId: 9
+  TestDescription: During the ongoing public sale, a user contributes a valid amount within the cap limits.
+  Expected: The transaction should be executed successfully, adding ether to the contract balance, and the user receives ProjectToken.
+
+- TestCaseId: 10
+  TestDescription: During the ongoing public sale, a user contributes a valid amount within the cap limits, but the public sale max cap is violated.
+  Expected: The transaction should be reverted by the VM.
+
+- TestCaseId: 11
+  TestDescription: The public sale has ended, and a user attempts to contribute.
+  Expected: The VM should revert the transaction.
+
+- TestCaseId: 12
+  TestDescription: The owner attempts to distribute tokens to account1.
+  Expected: The ProjectToken balance of account1 should increase.
+
+- TestCaseId: 13
+  TestDescription: A non-owner attempts to distribute tokens.
+  Expected: The transaction should be reverted by the VM.
+
+- TestCaseId: 14
+  TestDescription: The owner attempts to distribute more tokens than are present in the tokensale contract's reserve.
+  Expected: The transaction should be reverted by the VM.
+
+- TestCaseId: 15
+  TestDescription: Presale minimum cap is not reached, and a user requests a refund.
+  Expected: The transaction should succeed, and ether should be refunded to the user.
+
+- TestCaseId: 16
+  TestDescription: Public sale minimum cap is not reached, and a user requests a refund.
+  Expected: The transaction should be executed successfully, refunding ether, and placing ERC20 tokens back in the reserve.
+
+- TestCaseId: 17
+  TestDescription: A user claims a refund before the public sale has ended.
+  Expected: The VM should revert with an error.
+
+- TestCaseId: 18
+  TestDescription: A user claims a refund, but both the public sale and presale minimum caps were reached.
+  Expected: The VM should revert with an error.
+
+- TestCaseId: 19
+  TestDescription: A user who didn't contribute to the tokensale demands a refund.
+  Expected: The VM should revert with an error.
+
+- TestCaseId: 20
+  TestDescription: A user claims a refund but does not approve enough tokens for the token sale smart contract, proportional to the full refund amount.
+  Expected: The VM should revert with an error.
