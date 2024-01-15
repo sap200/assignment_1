@@ -4,6 +4,10 @@
 
 This is a Solidity smart contract for conducting a token sale in two phases: a presale and a public sale. It enables contributors to exchange Ether for project tokens. The smart contract includes features such as contribution limits, token distribution, and refund functionality based on the minimum cap.
 
+## Design Choices
+
+## Security Consideration
+
 ## Features
 
 ### Presale:
